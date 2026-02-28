@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATHIC - Operasi Aljabar pada Fungsi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+header{text-align:center;padding:40px 20px;}
+header h1{
+font-family:'Orbitron',sans-serif;
+font-size:3rem;
+color:#00f7ff;
+}
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:30px;
+}
+nav button{
+padding:10px 20px;
+border:none;
+border-radius:25px;
+background:#00f7ff;
+cursor:pointer;
+font-weight:bold;
+}
+section{
+display:none;
+max-width:1100px;
+margin:auto;
+padding:30px;
+background:rgba(255,255,255,0.07);
+border-radius:15px;
+margin-bottom:40px;
+}
+section.active{display:block;}
+h2{color:#00f7ff;}
+h3{color:#7fffd4;}
+.quiz-option{
+display:block;
+margin:8px 0;
+padding:12px;
+border-radius:10px;
+background:#1c1c1c;
+cursor:pointer;
+}
+.correct{background:#2ecc71 !important;}
+.wrong{background:#e74c3c !important;}
+footer{text-align:center;padding:20px;background:#000;}
+.stat-box{background:#111;padding:20px;border-radius:15px;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>MATHIC</h1>
+<p>Operasi Aljabar pada Fungsi - Pembahasan Lengkap</p>
+</header>
+
+<nav>
+<button onclick="showSection('materi')">Materi</button>
+<button onclick="showSection('contoh')">5 Contoh</button>
+<button onclick="showSection('latihan')">15 Latihan</button>
+<button onclick="showSection('kuis')">Kuis</button>
+</nav>
+
+<!-- ================= MATERI ================= -->
+<section id="materi" class="active">
+<h2>Materi Operasi Aljabar pada Fungsi</h2>
+<p>Jika terdapat dua fungsi f(x) dan g(x), maka operasi aljabar yang dapat dilakukan adalah penjumlahan, pengurangan, perkalian, pembagian, dan komposisi.</p>
+
+<h3>Rumus Umum</h3>
+<ul>
+<li>(f+g)(x)=f(x)+g(x)</li>
+<li>(f−g)(x)=f(x)−g(x)</li>
+<li>(fg)(x)=f(x)·g(x)</li>
+<li>(f/g)(x)=f(x)/g(x), g(x)≠0</li>
+<li>(f∘g)(x)=f(g(x))</li>
+</ul>
+</section>
+
+<!-- ================= 5 CONTOH DETAIL ================= -->
+<section id="contoh">
+<h2>5 Contoh Soal + Pembahasan Detail</h2>
+
+<h3>Contoh 1 (Penjumlahan)</h3>
+<p>Diketahui f(x)=2x+3 dan g(x)=x−1.</p>
+<p>Kita gunakan rumus (f+g)(x)=f(x)+g(x).</p>
+<p>Langkah pertama, kita substitusikan bentuk fungsi:</p>
+<p>(f+g)(x)=(2x+3)+(x−1).</p>
+<p>Langkah berikutnya kita hilangkan tanda kurung:</p>
+<p>=2x+3+x−1.</p>
+<p>Kemudian kita gabungkan suku sejenis:</p>
+<p>=3x+2.</p>
+
+<h3>Contoh 2 (Pengurangan)</h3>
+<p>f(x)=3x+2 dan g(x)=x²−4.</p>
+<p>(f−g)(x)=(3x+2)−(x²−4).</p>
+<p>Hilangkan kurung dengan memperhatikan tanda minus:</p>
+<p>=3x+2−x²+4.</p>
+<p>Gabungkan suku sejenis:</p>
+<p>=−x²+3x+6.</p>
+
+<h3>Contoh 3 (Perkalian)</h3>
+<p>f(x)=2x−1 dan g(x)=x+3.</p>
+<p>(fg)(x)=(2x−1)(x+3).</p>
+<p>Gunakan distributif:</p>
+<p>=2x·x + 2x·3 −1·x −1·3.</p>
+<p>=2x²+6x−x−3.</p>
+<p>=2x²+5x−3.</p>
+
+<h3>Contoh 4 (Pembagian)</h3>
+<p>f(x)=x²−4 dan g(x)=x−2.</p>
+<p>(f/g)(x)=(x²−4)/(x−2).</p>
+<p>Faktorkan pembilang:</p>
+<p>x²−4=(x−2)(x+2).</p>
+<p>Sehingga:</p>
+<p>=(x−2)(x+2)/(x−2).</p>
+<p>Sederhanakan (x−2):</p>
+<p>=x+2 dengan syarat x≠2.</p>
+
+<h3>Contoh 5 (Komposisi)</h3>
+<p>f(x)=2x+1 dan g(x)=x−2.</p>
+<p>(f∘g)(x)=f(g(x)).</p>
+<p>Kita masukkan g(x) ke dalam f:</p>
+<p>=2(x−2)+1.</p>
+<p>=2x−4+1.</p>
+<p>=2x−3.</p>
+</section>
+
+<!-- ================= 15 LATIHAN DETAIL ================= -->
+<section id="latihan">
+<h2>15 Latihan Soal + Pembahasan Lengkap</h2>
+
+<script>
+document.write(`
+<h3>Latihan 1</h3>
+<p>f(x)=x+5 dan g(x)=x−2.</p>
+<p>(f+g)(x)=(x+5)+(x−2).</p>
+<p>=x+5+x−2.</p>
+<p>=2x+3.</p>
+
+<h3>Latihan 2</h3>
+<p>f(x)=2x dan g(x)=x+3.</p>
+<p>(f−g)(x)=2x−(x+3).</p>
+<p>=2x−x−3.</p>
+<p>=x−3.</p>
+
+<h3>Latihan 3</h3>
+<p>f(x)=x² dan g(x)=x².</p>
+<p>(f+g)(x)=x²+x²=2x².</p>
+
+<h3>Latihan 4</h3>
+<p>f(x)=4x dan g(x)=x.</p>
+<p>(fg)(x)=4x·x=4x².</p>
+
+<h3>Latihan 5</h3>
+<p>f(x)=5x dan g(x)=x+1.</p>
+<p>(f∘g)(x)=5(x+1)=5x+5.</p>
+
+<h3>Latihan 6</h3>
+<p>f(x)=x³ dan g(x)=x².</p>
+<p>(fg)(x)=x³·x²=x⁵.</p>
+
+<h3>Latihan 7</h3>
+<p>f(x)=3x+1 dan g(x)=2x.</p>
+<p>(f/g)(x)=(3x+1)/(2x).</p>
+
+<h3>Latihan 8</h3>
+<p>f(x)=x−1 dan g(x)=x+1.</p>
+<p>(f+g)(x)=2x.</p>
+
+<h3>Latihan 9</h3>
+<p>f(x)=7x dan g(x)=x.</p>
+<p>(f−g)(x)=6x.</p>
+
+<h3>Latihan 10</h3>
+<p>f(x)=x²+2 dan g(x)=3.</p>
+<p>(f∘g)(x)=3²+2=11.</p>
+
+<h3>Latihan 11</h3>
+<p>f(x)=2x² dan g(x)=x.</p>
+<p>(fg)(x)=2x³.</p>
+
+<h3>Latihan 12</h3>
+<p>f(x)=x+1 dan g(x)=x−1.</p>
+<p>(f∘g)(x)=x.</p>
+
+<h3>Latihan 13</h3>
+<p>f(x)=x² dan g(x)=2x.</p>
+<p>(f/g)(x)=x²/(2x)=x/2.</p>
+
+<h3>Latihan 14</h3>
+<p>f(x)=4x dan g(x)=4.</p>
+<p>(f/g)(x)=x.</p>
+
+<h3>Latihan 15</h3>
+<p>f(x)=x+7 dan g(x)=3x.</p>
+<p>(f−g)(x)=x+7−3x=−2x+7.</p>
+`);
+</script>
+</section>
+
+<!-- ================= KUIS ================= -->
+<section id="kuis">
+<h2>Kuis Interaktif (20 Soal)</h2>
+<div id="quiz-container"></div>
+<div id="result"></div>
+</section>
+
+<footer>
+<p>Rihanna XII-M4-2</p>
+<p>© 2026 MATHIC</p>
+</footer>
+
+<script>
+function showSection(id){
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+}
+
+const quizData=[
+{q:"f(x)=x+2 dan g(x)=x−3. (f+g)?", options:["2x-1","x-1","2x+5"], answer:"2x-1", explain:"(x+2)+(x−3)=2x−1"},
+{q:"f(x)=2x dan g(x)=x. (fg)?", options:["2x²","x²","2x"], answer:"2x²", explain:"2x·x=2x²"}
+];
+
+while(quizData.length<20){
+quizData.push(quizData[Math.floor(Math.random()*2)]);
+}
+
+let current=0;
+let score=0;
+let wrong=[];
+
+function shuffle(array){
+for(let i=array.length-1;i>0;i--){
+const j=Math.floor(Math.random()*(i+1));
+[array[i],array[j]]=[array[j],array[i]];
+}
+return array;
+}
+
+function loadQuiz(){
+if(current>=quizData.length){showResult();return;}
+let q=quizData[current];
+let container=document.getElementById("quiz-container");
+container.innerHTML="<h3>Soal "+(current+1)+"</h3><p>"+q.q+"</p>";
+let shuffled=shuffle([...q.options]);
+shuffled.forEach(opt=>{
+let btn=document.createElement("div");
+btn.className="quiz-option";
+btn.innerText=opt;
+btn.onclick=()=>answer(btn,opt,q.answer,q.explain);
+container.appendChild(btn);
+});
+}
+
+function answer(btn,opt,correct,explain){
+if(opt===correct){
+btn.classList.add("correct");
+score+=5;
+}else{
+btn.classList.add("wrong");
+wrong.push({q:quizData[current].q,explain:explain});
+}
+setTimeout(()=>{current++;loadQuiz();},800);
+}
+
+function showResult(){
+document.getElementById("quiz-container").innerHTML="";
+let result=document.getElementById("result");
+result.innerHTML="<div class='stat-box'><h3>Skor: "+score+"/100</h3>";
+if(wrong.length>0){
+result.innerHTML+="<h4>Soal Salah:</h4>";
+wrong.forEach(w=>{
+result.innerHTML+="<p><b>"+w.q+"</b><br>Pembahasan: "+w.explain+"</p>";
+});
+}
+result.innerHTML+="</div>";
+}
+
+loadQuiz();
+</script>
+
+</body>
+</html>
